@@ -1,0 +1,175 @@
+<section class="container flex items-center justify-center">
+  <main class="mx-auto my-16 md:max-w-xl">
+    <div class="text-center">
+      <h1 class="mb-12 font-bold">👋 Welcome to Angular Boilerplate</h1>
+
+      <a
+        class="text-sm link"
+        [routerLink]="['/', path.base.dashboard]"
+        class="mb-12 btn btn-primary"
+      >
+        Go to dashboard
+      </a>
+    </div>
+
+    <h3 class="mb-4">Choose a theme</h3>
+
+    <div class="grid grid-cols-1 mb-12 gap-x-6 gap-y-3 md:grid-cols-3">
+      <button
+        class="btn btn-secondary"
+        (click)="onClickChangeTheme(theme.System)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+        System
+      </button>
+      <button
+        class="btn btn-secondary"
+        (click)="onClickChangeTheme(theme.Light)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+        Light
+      </button>
+      <button
+        class="btn btn-secondary"
+        (click)="onClickChangeTheme(theme.Dark)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          />
+        </svg>
+        Dark
+      </button>
+    </div>
+
+    <h3 class="mb-4">👉 Visit the app pages</h3>
+
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div>
+        <h4 class="h5">Settings</h4>
+        <ul>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.account]"
+            >
+              Account
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.appearance]"
+            >
+              Appearance
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.billing]"
+            >
+              Billing
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.blockedUsers]"
+            >
+              Blocked users
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.notifications]"
+            >
+              Notifications
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.security]"
+            >
+              Security
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.settings.root, path.settings.securityLog]"
+            >
+              Security log
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="h5">User</h4>
+        <ul>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.user.root, 'john_wick97']"
+              text-sm
+            >
+              My profile
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-sm link"
+              [routerLink]="['/', path.user.root, path.user.overview]"
+            >
+              Users overview
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</section>
